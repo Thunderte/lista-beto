@@ -9,30 +9,45 @@ def jogoAdvinhacao(nivelDeJogo: int):
 
     if numeroSorteado and numeroSorteado >= numeroInicial and numeroSorteado <= numeroLimite:
         if nivelDeJogo == 1:
+            print('Você tem 10 tentativas\n')
             for i in range(0, 10):
                numeroDeTentativas = numeroDeTentativas + 1
-               tentativa: int = int(input(f'Você tem 10 tentativas\nTentativa {numeroDeTentativas} \n Digite um número de 0 a 100 e eu digo se você acertou: \n'))
+               tentativa: int = int(input(f'Tentativa {numeroDeTentativas} \n Digite um número de 0 a 100 e eu digo se você acertou: \n'))
 
                if tentativa == numeroSorteado:
                 return f'Parabéns, você acertou o número sorteado que é {numeroSorteado} na {numeroDeTentativas} tentativa no modo de dificuldade fácil\nObrigado por jogar'
+               elif tentativa > numeroSorteado:
+                  print(f'\nO número sorteado é menor que {tentativa}\n')
+               elif tentativa < numeroSorteado:
+                  print(f'\nO número sorteado é maior que {tentativa}\n')
 
         elif nivelDeJogo == 2:
+              print('Você tem 5 tentativas\n')
               for i in range(0, 5):
                numeroDeTentativas = numeroDeTentativas + 1
-               tentativa: int = int(input(f'Você tem 5 tentativas\nTentativa {numeroDeTentativas} \n Digite um número de 0 a 100 e eu digo se você acertou: \n'))
+               tentativa: int = int(input(f'\nTentativa {numeroDeTentativas} \n Digite um número de 0 a 100 e eu digo se você acertou: \n'))
 
                if tentativa == numeroSorteado:
                 return f'Parabéns, você acertou o número sorteado que é {numeroSorteado} na {numeroDeTentativas} tentativa no modo de dificuldade médio\nObrigado por jogar'
+               elif tentativa > numeroSorteado:
+                  print(f'\nO número sorteado é menor que {tentativa}\n')
+               elif tentativa < numeroSorteado:
+                  print(f'\nO número sorteado é maior que {tentativa}\n')
 
         elif nivelDeJogo == 3:
+              print('Você tem 3 tentativas\n')
               for i in range(0, 3):
                numeroDeTentativas = numeroDeTentativas + 1
-               tentativa: int = int(input(f'Você tem 3 tentativas\nTentativa {numeroDeTentativas} \n Digite um número de 0 a 100 e eu digo se você acertou: \n'))
+               tentativa: int = int(input(f'\nTentativa {numeroDeTentativas} \n Digite um número de 0 a 100 e eu digo se você acertou: \n'))
 
                if tentativa == numeroSorteado:
                 return f'Parabéns, você acertou o número sorteado que é {numeroSorteado} na {numeroDeTentativas} tentativa no modo de dificuldade médio\nObrigado por jogar'
+               elif tentativa > numeroSorteado:
+                  print(f'\nO número sorteado é menor que {tentativa}\n')
+               elif tentativa < numeroSorteado:
+                  print(f'\nO número sorteado é maior que {tentativa}\n')
 
-        return f'Você perdeu o jogo, reinicie e tente novamente'
+        return f'Você perdeu o jogo, reinicie e tente novamente. \n O numero sorteado era {numeroSorteado}'
 
 
 def main() -> None:
