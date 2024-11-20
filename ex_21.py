@@ -1,18 +1,11 @@
-def vogaisEConsoantes(frase: str) -> str:
-    vogais = "aeiouáéíóúâêôãõàAEIOUÁÉÍÓÚÂÊÔÃÕÀ"
-    consoantes = "bcçdfghjklmnpqrstvwxyzBCÇDFGHJKLMNPQRSTVWXYZ"
-    quantidadeVogais = 0
-    quantidadeConsoantes = 0
+def removerElementosDuplicados(lista):
+    novaLista = []
+    for i in range(len(lista)):
+        if lista[i] not in novaLista:
+            novaLista.append(lista[i])
+    return novaLista
 
-    for letra in frase:
-        if letra in vogais:
-            quantidadeVogais = (quantidadeVogais + 1)
-        elif letra in consoantes:
-            quantidadeConsoantes = (quantidadeConsoantes + 1)
-    return f"A frase informada contém {quantidadeVogais} vogais e {quantidadeConsoantes} consoantes"
+def main():
+    print(removerElementosDuplicados([1, 2, 3, 5, 6, 9, 2 , 3, 4]))
 
-
-
-
-
-print(vogaisEConsoantes("testando para ver se está funcionando"))
+main()
